@@ -141,7 +141,7 @@ body {
   height: 100vh;
 
   /* & input{
-    margin-left: 8px;
+    margin-left: .5rem;
   } */
 }
 
@@ -150,7 +150,7 @@ body {
 }
 .c-input-play-pause:checked ~ .c-robot .c-robot__body,
 .c-input-play-pause:checked ~ .c-robot .c-robot__shadow {
-  animation-play-state: paused; 
+  --play-state: paused;
 }
 
 .c-robot {
@@ -165,18 +165,16 @@ body {
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-direction:alternate ;
-
-  /* --play-state-robot:running;
-  animation-play-state: var(--play-state-robot); */
+  --play-state: running;
+  animation-play-state: var(--play-state); 
 }
 
 .c-robot__shadow {
   fill: #000;
   opacity: 1;
   transform-origin: 50% 100%;
-/* 
-  --play-state-shadow:running;
-  animation-play-state: var(--play-state-shadow); */
+  --play-state: running; 
+  animation-play-state: var(--play-state);
 }
 
 #Shadow {
